@@ -1,7 +1,9 @@
+@use 'src/css/site-common.scss';
+
 .dsr-pro-summary {
 
   padding: 35px 0;
-  box-shadow: 0 2px 1px 0 #0085FF;
+  box-shadow: 0 2px 1px 0 site-common.$dsr-blue;
   margin-bottom: 2px;
 
   &__name {
@@ -38,8 +40,8 @@
   &--dark {
     @extend .dsr-pro-summary;
 
-    color: #cfcfcf;
-    background-color: #00203f;
+    color: site-common.$dsr-grey;
+    background-color: site-common.$dsr-dark-blue;
   }
 }
 

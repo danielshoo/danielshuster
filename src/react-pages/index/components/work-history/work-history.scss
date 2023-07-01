@@ -1,3 +1,5 @@
+@use 'src/css/site-common.scss';
+
 .dsr-work-history {
 
   position: relative;
@@ -25,7 +27,7 @@
       display: none;
       width: 20px;
       height: 20px;
-      background-color: #0085FF;
+      background-color: site-common.$dsr-blue;
     }
   }
 
@@ -53,8 +55,8 @@
   &--dark {
     @extend .dsr-work-history;
 
-    background-color: #00203f;
-    color: #cfcfcf;
+    background-color: site-common.$dsr-dark-blue;
+    color: site-common.$dsr-grey;
   }
 }
 

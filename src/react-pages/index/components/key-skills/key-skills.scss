@@ -1,7 +1,9 @@
+@use 'src/css/site-common.scss';
+
 .dsr-key-skills {
 
   position: relative;
-  box-shadow: 0 2px 1px 0 #0085FF;
+  box-shadow: 0 2px 1px 0 site-common.$dsr-grey--darker;
   padding: 30px 12px;
   margin-bottom: 2px;
 
@@ -36,7 +38,7 @@
 
   &__skill {
     display: inline-block;
-    border: 1px solid #BFBFBF;
+    border: 1px solid site-common.$dsr-grey--darker;
     padding: 6px 10px;
     border-radius: 7px;
     margin-right: 10px;
@@ -47,8 +49,8 @@
   &--dark {
     @extend .dsr-key-skills;
 
-    background-color: #00203f;
-    color: #cfcfcf;
+    background-color: site-common.$dsr-dark-blue;
+    color: site-common.$dsr-grey;
   }
 }
 
@@ -76,7 +78,7 @@
         display: block;
         width: 20px;
         height: 20px;
-        background-color: #0085FF;
+        background-color: site-common.$dsr-blue;
         transition: all 0.3s ease;
         clip-path: polygon(0 0, 50% 50%, 100% 0, 50% 100%, 50% 100%, 50% 100%);
       }

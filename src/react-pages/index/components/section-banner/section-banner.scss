@@ -1,3 +1,5 @@
+@use 'src/css/site-common.scss';
+
 .dsr-section-banner {
 
   display: flex;
@@ -7,8 +9,8 @@
   left: calc(50% - 125px);
   top: -1.25rem;
   height: calc(1.25rem * 2);
-  background-color: white;
-  border: 1px solid #CBCBCB;
+  background-color: site-common.$dsr-white;
+  border: 1px solid site-common.$dsr-grey;
   width: 250px;
   text-align: center;
 
@@ -22,11 +24,11 @@
   &--dark {
     @extend .dsr-section-banner;
 
-    background-color: #0085FF;
-    border: 1px solid #0085FF;
+    background-color: site-common.$dsr-blue;
+    border: 1px solid site-common.$dsr-blue;
 
     .dsr-section-banner__text {
-      color: #cfcfcf;
+      color: site-common.$dsr-grey;
     }
   }
 }
