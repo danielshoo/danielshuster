@@ -1,0 +1,32 @@
+.dsr-search {
+
+  position: relative;
+  height: 36px;
+  width: 383px;
+  display: flex;
+  align-items: center;
+
+  * {
+    box-sizing: border-box;
+  }
+
+  &__icon {
+    position: absolute;
+    height: calc(100% - 20px);
+    width: 40px;
+  }
+
+  &__input {
+    width: 100%;
+    height: 100%;
+    border-radius: 16px;
+    padding-left: 40px;
+    outline: none;
+    border: none;
+    box-shadow: inset 0 0 1px 1px #cecece;
+
+    &:focus {
+      box-shadow: inset 0 0 2.5px 1px #c7c7c7;
+    }
+  }
+}
