@@ -18,8 +18,12 @@
     font-family: Inter, Arial, Helvetica, sans-serif;
 }
 
-html {
+.html {
     background-color: #e7e7e7;
+
+    &--dark {
+        background-color: #00203f;
+    }
 }
 
 body {
@@ -30,5 +34,5 @@ html, body {
     margin: 0 auto;
     //height: 100%;
     width: 100%;
-    max-width: 1000px;
+    //max-width: 1000px;
 }

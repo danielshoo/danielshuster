@@ -1,15 +1,20 @@
 const React = require('react');
 const navMenuCSS = require('./nav-menu.scss');
 
+const GlobalContext = require('./../../../../contexts/GlobalContext.tsx');
+
 module.exports = (props) => {
 
     const [currentPage, setCurrentPage] = React.useState(props.currentPage)
+
+    const globalCTX = React.useContext(GlobalContext);
+    const rootClassname = globalCTX.theme === 'dark' ? 'dsr-nav-menu--dark' : 'dsr-nav-menu'
 
     React.useEffect(() => {
         setCurrentPage(props.currentPage);
     }, [props.currentPage]);
 
-    return <span className={'dsr-nav-menu'}>
+    return <span className={rootClassname}>
         <div className={'dsr-nav-menu__icon'}>
             <div className={'dsr-nav-menu__icon-bar'}/>
             <div className={'dsr-nav-menu__icon-bar'}/>

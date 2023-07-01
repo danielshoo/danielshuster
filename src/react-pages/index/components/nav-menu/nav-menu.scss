@@ -3,6 +3,7 @@
   height: 36px;
   display: flex;
   align-items: flex-end;
+  margin-bottom: 2px;
 
   &__icon {
     display: flex;
@@ -31,5 +32,21 @@
     font-size: 2rem;
     margin-left: 8px;
     top: 4px;
+  }
+
+  &--dark {
+    @extend .dsr-nav-menu;
+
+    .dsr-nav-menu__icon {
+      border: 1px solid #0085FF;
+    }
+
+    .dsr-nav-menu__icon-bar {
+      background-color: #0085FF;
+    }
+
+    .dsr-nav-menu__current-page-text {
+      color: #0085FF;
+    }
   }
 }

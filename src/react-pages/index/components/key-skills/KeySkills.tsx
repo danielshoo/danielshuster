@@ -3,8 +3,14 @@ const keySkillsCSS = require('./key-skills.scss');
 const SectionBanner = require('../section-banner/SectionBanner');
 const sectionBannerCss = require('../section-banner/section-banner.scss');
 
+const GlobalContext = require('./../../../../contexts/GlobalContext.tsx');
+
 module.exports = () => {
-    return <section className={'dsr-key-skills'}>
+
+    const globalCTX = React.useContext(GlobalContext);
+    const rootClassname = globalCTX.theme === 'dark' ? 'dsr-key-skills--dark' : 'dsr-key-skills'
+
+    return <section className={rootClassname}>
         <SectionBanner>
             <span className={'dsr-section-banner__text'}>Key Skills</span>
             <svg className={'dsr-section-banner__icon'} xmlns="http://www.w3.org/2000/svg" width="24" height="23" fill="none" viewBox="0 0 24 23">

@@ -8,8 +8,14 @@ const List = require('./components/list/List');
 const SectionBanner = require('../section-banner/SectionBanner');
 const sectionBannerCss = require('../section-banner/section-banner.scss');
 
+const GlobalContext = require('./../../../../contexts/GlobalContext.tsx');
+
 module.exports = () => {
-    return <div className={'dsr-work-history'}>
+
+    const globalCTX = React.useContext(GlobalContext);
+    const rootClassname = globalCTX.theme === 'dark' ? 'dsr-work-history--dark' : 'dsr-work-history'
+
+    return <div className={rootClassname}>
         <SectionBanner>
             <span className={'dsr-section-banner__text'}>Work History</span>
             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="25" fill="none" viewBox="0 0 22 25">

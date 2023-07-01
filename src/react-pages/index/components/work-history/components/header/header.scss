@@ -12,6 +12,16 @@
     transition: all 0.3s ease;
     clip-path: polygon(0 0, 50% 50%, 100% 0, 50% 100%, 50% 100%, 50% 100%);
   }
+
+  &--dark {
+    @extend .dsr-work-header;
+
+    background-color: #0085FF;
+
+    .dsr-work-header__toggle-icon {
+      background-color: #cfcfcf;
+    }
+  }
 }
 
 @media screen and (max-width: 650px) {

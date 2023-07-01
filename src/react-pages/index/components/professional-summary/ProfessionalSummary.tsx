@@ -1,8 +1,14 @@
 const React = require('react');
 const ProfessionalSummaryCss = require('./professional-summary.scss');
 
+const GlobalContext = require('./../../../../contexts/GlobalContext.tsx');
+
 module.exports = (props) => {
-    return <section className={'dsr-pro-summary'}>
+
+    const globalCTX = React.useContext(GlobalContext);
+    const rootClassname = globalCTX.theme === 'dark' ? 'dsr-pro-summary--dark' : 'dsr-pro-summary'
+
+    return <section className={rootClassname}>
         <div className={'dsr-pro-summary__selfie-img'} alt={'Daniel Shuster'}/>
         <h4 className={'dsr-pro-summary__name'}>Daniel Shuster</h4>
         <h5 className={'dsr-pro-summary__title'}>Senior Software Engineer</h5>

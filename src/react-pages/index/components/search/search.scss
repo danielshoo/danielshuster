@@ -28,4 +28,16 @@
       box-shadow: inset 0 0 2.5px 1px #c7c7c7;
     }
   }
+
+  &--dark {
+    @extend .dsr-search;
+
+    .dsr-search__input {
+      background-color: #0085FF;
+
+      &::placeholder {
+        color: #BFBFBF;
+      }
+    }
+  }
 }

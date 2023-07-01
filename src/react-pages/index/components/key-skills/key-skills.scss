@@ -3,6 +3,7 @@
   position: relative;
   box-shadow: 0 2px 1px 0 #0085FF;
   padding: 30px 12px;
+  margin-bottom: 2px;
 
   &__display-checkbox {
     appearance: none;
@@ -41,6 +42,13 @@
     margin-right: 10px;
     margin-bottom: 8px;
     width: fit-content  ;
+  }
+
+  &--dark {
+    @extend .dsr-key-skills;
+
+    background-color: #00203f;
+    color: #cfcfcf;
   }
 }
 

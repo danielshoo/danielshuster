@@ -1,8 +1,14 @@
 const React = require('react');
 const sectionBannerCss = require('./section-banner.scss');
 
+const GlobalContext = require('./../../../../contexts/GlobalContext.tsx');
+
 module.exports = (props) => {
-    return <div className={'dsr-section-banner'}>
+
+    const globalCTX = React.useContext(GlobalContext);
+    const rootClassname = globalCTX.theme === 'dark' ? 'dsr-section-banner--dark' : 'dsr-section-banner'
+
+    return <div className={rootClassname}>
         {props.children}
     </div>
 };

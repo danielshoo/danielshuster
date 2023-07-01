@@ -7,6 +7,7 @@
   height: 80px;
   box-shadow: 0 2px 1px 0 #0085FF;
   padding: 0 12px;
+  margin-bottom: 2px;
 
   & *:first-child {
     justify-self: left;
@@ -14,6 +15,13 @@
 
   & *:last-child {
     justify-self: right;
+  }
+
+  &--dark {
+
+    @extend .dsr-navigation-bar;
+    background-color: #00203f;
+    color: #FFFFFF;
   }
 }
 

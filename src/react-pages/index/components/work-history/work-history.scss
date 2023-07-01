@@ -2,6 +2,7 @@
 
   position: relative;
   padding: 45px 12px 30px;
+  margin-bottom: 2px;
 
   &__display-checkbox {
     appearance: none;
@@ -43,8 +44,17 @@
     }
 
     &__li {
+      display: list-item;
+      list-style-type: disc;
       margin-bottom: 10px;
     }
+  }
+
+  &--dark {
+    @extend .dsr-work-history;
+
+    background-color: #00203f;
+    color: #cfcfcf;
   }
 }
 
@@ -75,11 +85,6 @@
         min-height: 0;
         transition: opacity 1s;
         opacity: 0;
-      }
-
-      &__li {
-        display: list-item;
-        list-style-type: disc;
       }
     }
 
