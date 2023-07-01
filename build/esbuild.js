@@ -1,15 +1,16 @@
 const fs = require('fs');
 const path = require('path');
 const process = require('node:process');
+const sass = require('sass');
 const esbuild = require('esbuild');
-const recursiveReadSync = require('recursive-readdir-sync');
+const esSassPlugin = require("esbuild-plugin-sass");
 
 
 const isWatchMode = process.argv.includes('--watch');
 const isProductionMode = process.argv.includes('--prod');
 
 const srcMainFile = path.resolve(__dirname, '..', 'main.ts');
-const publicMainFile = path.resolve(__dirname, '..', 'public', 'js', 'main.ts');
+const publicMainFile = path.resolve(__dirname, '..', 'public', 'react-pages', 'main.ts');
 
 const publicEsBuildOptions = {
     platform: 'browser',
@@ -20,6 +21,7 @@ const publicEsBuildOptions = {
     tsconfig: path.resolve(__dirname, '..', 'tsconfig.json'),
     bundle: true,
     minify: isProductionMode,
+    plugins: [esSassPlugin()],
 }
 
 const srcEsBuildOptions = {
@@ -30,6 +32,33 @@ const srcEsBuildOptions = {
     tsconfig: path.resolve(__dirname, '..', 'tsconfig.json'),
     bundle: true,
     minify: isProductionMode,
+    plugins: [{
+        name: 'sassToString',
+        setup: function (build) {
+
+            build.onResolve({ filter: /.scss$/ }, args => {
+
+                const sourceFullPath = require.resolve(args.path, {
+                    paths: [args.resolveDir],
+                });
+
+                return {
+                    path: sourceFullPath,
+                    namespace: 'file',
+                };
+            });
+
+            build.onLoad({ filter: /.s[ac]ss$/, namespace: 'file' }, (args) => {
+
+                const scssString = fs.readFileSync(args.path, {encoding: 'utf-8'});
+                const scssFileContents = sass.compileString(scssString);
+
+               return {
+                   contents: `module.exports = ${JSON.stringify(scssFileContents.css)}`
+               };
+            });
+        }
+    }],
 };
 
 if (isWatchMode) {
