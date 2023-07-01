@@ -26,7 +26,7 @@ module.exports = () => {
                 <span className={'dsr-work-history__location'}>Remote</span>
             </Header>
         </label>
-        <List className={'dsr-work-history__history'}>
+        <List>
             <>Full stack LAMP development with Apache, PHP, MySQL, HTML5, CSS3, Javascript (ES6).</>
             <>Maintain and enhance a modern frontend tech stack grounded in NodeJS, WebPack, & Babel</>
             <>Refactor and modernize legacy architecture to increase code reuse and reduce complexity</>
@@ -44,7 +44,7 @@ module.exports = () => {
                 <span className={'dsr-work-history__location'}>Remote</span>
             </Header>
         </label>
-        <List className={'dsr-work-history__history'}>
+        <List>
             <>Maintain and support code for 7 consumer facing web apps deployed across 3 countries for a fortune 500 company</>
             <>Greatly reduced fraudulent accounts by writing a top performing algorithm</>
             <>Improved application stability by writing browser based automation test suites with Selenium</>
@@ -62,7 +62,7 @@ module.exports = () => {
                 <span className={'dsr-work-history__location'}>Coral Springs, Fl</span>
             </Header>
         </label>
-        <List className={'dsr-work-history__history'}>
+        <List>
             <>Train new developers to program in Magic (programming language) with a focus on writing clean code</>
             <>Work in an on-call environment, resolving pages to ensure systems remain available for users</>
             <>Work in a remote setup, communicating with consultants and developers in a project management environment</>

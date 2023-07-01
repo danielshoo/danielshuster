@@ -45,11 +45,22 @@
 }
 
 @media screen and (max-width: 650px) {
+
   .dsr-key-skills {
 
+    &__skills-row {
+      display: flex;
+      flex-wrap: wrap;
+      min-height: 0;
+      transition: opacity 1s;
+      opacity: 0;
+    }
+
     &__skills {
-      height: 0;
-      overflow: hidden;;
+      display: grid;
+      grid-template-rows: 0fr;
+      transition: grid-template-rows 1s;
+      overflow: hidden;
     }
 
     &__toggle {
@@ -70,13 +81,18 @@
       }
 
       + .dsr-key-skills__toggle-label + .dsr-key-skills__skills {
-        height: auto;
+
+        grid-template-rows: 1fr;
+
+        .dsr-key-skills__skills-row {
+          opacity: 1;
+        }
       }
     }
 
     &__display-checkbox:not(:checked) {
       + .dsr-key-skills__toggle-label + .dsr-key-skills__skills:first-of-type {
-        display: none;
+        max-height: 0;
       }
     }
   }

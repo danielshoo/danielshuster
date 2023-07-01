@@ -28,13 +28,21 @@
     }
   }
 
-  &__history {
+  .dsr-list {
 
-    margin: 24px 0 24px 0;
-    padding-left: 24px;
-    line-height: 1.5rem;
+    margin: 12px 0;
+    overflow: hidden;
 
-    &-item {
+    &__ul {
+      display: flex;
+      flex-direction: column;
+      min-height: 0;
+      transition: visibility 1s;
+      padding-left: 24px;
+      line-height: 1.5rem;
+    }
+
+    &__li {
       margin-bottom: 10px;
     }
   }
@@ -56,11 +64,23 @@
       display: none;
     }
 
-    &__history {
-      margin: 12px 0 12px 0;
-      font-size: 1.15rem;
-      height: 0;
+    .dsr-list {
+
+      display: grid;
+      grid-template-rows: 0fr;
       overflow: hidden;
+      transition: grid-template-rows 1s;
+
+      &__ul {
+        min-height: 0;
+        transition: opacity 1s;
+        opacity: 0;
+      }
+
+      &__li {
+        display: list-item;
+        list-style-type: disc;
+      }
     }
 
     &__display-checkbox:checked {
@@ -69,11 +89,15 @@
         clip-path: polygon(0 45%, 50% 45%, 100% 45%, 100% 55%, 50% 55%, 0% 55%);
       }
 
-      + .dsr-work-history__toggle-label + .dsr-work-history__history {
-        height: auto;
+      + .dsr-work-history__toggle-label + .dsr-list {
+
+        grid-template-rows: 1fr;
+
+        .dsr-list__ul {
+            opacity: 1;
+        }
       }
     }
-
   }
 }
 
