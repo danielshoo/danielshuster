@@ -18,6 +18,16 @@ module.exports = function Index() {
         setTheme,
     };
 
+    React.useEffect(() => {
+
+        if (theme === 'light') {
+            document.querySelector('.html').classList.remove('html--dark');
+        } else {
+            document.querySelector('.html').classList.add('html--dark');
+        }
+
+    }, [theme]);
+
     return <GlobalContext.Provider value={globalCtx}>
             <NavigationBar>
                 <NavMenu currentPage={'Resumé'}/>
