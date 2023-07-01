@@ -2,13 +2,18 @@ const React = require('react');
 const themeToggleCSS = require('./theme-toggle.scss');
 const ThemeToggleStyle = () => <style>{themeToggleCSS}</style>;
 
+const GlobalContext = require('./../../../../contexts/GlobalContext.tsx');
+
 module.exports = function ThemeToggle() {
 
-    const toggleID = (Math.random() * 100000).toFixed(0);
+    const globalCTX = React.useContext(GlobalContext);
+
+    const isDarkTheme = globalCTX.theme === 'dark';
+    const themeToToggleTo = isDarkTheme ? 'light' : 'dark';
 
     return <span>
-        <input id={'theme-toggle-'+toggleID} type={'checkbox'} className={"dsr-theme-toggle__checkbox"}/>
-        <label htmlFor={'theme-toggle-'+toggleID} className="dsr-theme-toggle">
+        <input id={'theme-toggle-1'} type={'checkbox'} className={"dsr-theme-toggle__checkbox"} onChange={() => { globalCTX.setTheme(themeToToggleTo) }}/>
+        <label htmlFor={'theme-toggle-1'} className="dsr-theme-toggle">
             <span className="dsr-theme-toggle__icon-1">
                 <svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M12 11.807A9.002 9.002 0 0 1 10.049 2a9.942 9.942 0 0 0-5.12 2.735c-3.905 3.905-3.905 10.237 0 14.142 3.906 3.906 10.237 3.905 14.143 0a9.946 9.946 0 0 0 2.735-5.119A9.003 9.003 0 0 1 12 11.807z"/></svg>
             </span>

@@ -16,7 +16,7 @@ const dirPublic = path.resolve(dirProjectRoot, 'public');
 module.exports = (writeCSSFile = false) => {
 
     return {
-        name: 'esbuild_public_sass_to_css',
+        name: 'esbuild_sass_to_css',
         setup: function (build) {
 
             let resets = [];
