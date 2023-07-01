@@ -14,10 +14,9 @@
 
   &__selfie-img {
     float: left;
-    shape-outside: circle(50%);
+    shape-outside: circle(51%);
     height: 200px;
     width: 200px;
-    background: url(/selfie.png);
     background-size: 100%;
     clip-path: circle(50% at 50% 50%);
     margin: 0 23px 0 12px;

@@ -9,7 +9,7 @@ module.exports = (props) => {
     const rootClassname = globalCTX.theme === 'dark' ? 'dsr-pro-summary--dark' : 'dsr-pro-summary'
 
     return <section className={rootClassname}>
-        <div className={'dsr-pro-summary__selfie-img'} alt={'Daniel Shuster'}/>
+        <img src="/selfie.png" className={'dsr-pro-summary__selfie-img'} alt={'Picture of Daniel Shuster (left) feeding a carrot to a horse (right)'}/>
         <h4 className={'dsr-pro-summary__name'}>Daniel Shuster</h4>
         <h5 className={'dsr-pro-summary__title'}>Senior Software Engineer</h5>
         <p className={'dsr-pro-summary__summary'}>
