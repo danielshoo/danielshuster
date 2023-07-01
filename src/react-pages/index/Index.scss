@@ -1,3 +1,4 @@
+@use 'src/css/site-common.scss';
 @use 'components/key-skills/key-skills';
 @use 'components/nav-menu/nav-menu.scss';
 @use 'components/navigation-bar/navigation-bar.scss';
@@ -19,20 +20,19 @@
 }
 
 .html {
-    background-color: #e7e7e7;
+    background-color: site-common.$dsr-grey--lighter;
 
     &--dark {
-        background-color: #0085FF;
+        background-color: site-common.$dsr-blue;
     }
 }
 
 body {
-    background-color: white;
+    background-color: site-common.$dsr-white;
 }
 
 html, body {
     margin: 0 auto;
-    //height: 100%;
     width: 100%;
     max-width: 1000px;
 }
