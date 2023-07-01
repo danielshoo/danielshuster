@@ -30,14 +30,11 @@
 
   &__history {
 
-    padding: 12px 0;
+    margin: 24px 0 24px 0;
+    padding-left: 24px;
     line-height: 1.5rem;
 
-    ul {
-      padding-left: 24px;
-    }
-
-    li {
+    &-item {
       margin-bottom: 10px;
     }
   }
@@ -60,12 +57,10 @@
     }
 
     &__history {
+      margin: 12px 0 12px 0;
+      font-size: 1.15rem;
       height: 0;
       overflow: hidden;
-
-      & ul {
-        padding-left: 12px;
-      }
     }
 
     &__display-checkbox:checked + .dsr-work-history__history {

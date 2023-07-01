@@ -8,7 +8,7 @@ module.exports = (props) => {
         children.push(props.children[i]);
 
         if (i !== props.children.length - 1) {
-            children.push(<span className={'dsr-work-header__divider'}> | </span>);
+            children.push(<span key={i} className={'dsr-work-header__divider'}> | </span>);
         }
     }
 

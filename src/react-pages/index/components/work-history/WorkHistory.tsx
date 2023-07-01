@@ -26,17 +26,15 @@ module.exports = () => {
             </Header>
         </label>
         <input id={'work-history--1'} type={'checkbox'} className={'dsr-work-history__display-checkbox'}/>
-        <div className={'dsr-work-history__history'}>
-            <List>
-                <span>Full stack LAMP development with Apache, PHP, MySQL, HTML5, CSS3, Javascript (ES6).</span>
-                <span>Maintain and enhance a modern frontend tech stack grounded in NodeJS, WebPack, & Babel</span>
-                <span>Refactor and modernize legacy architecture to increase code reuse and reduce complexity</span>
-                <span>Work closely with the UX team to bring modern designs to the web from mockup</span>
-                <span>Interview and onboard new and established developers</span>
-                <span>Mentor new and established developers on coding best practices with a focus on frontend development</span>
-                <span>Migrated a unix-based dev environment over to Windows for fun with an added benefit of enabling developers to work on more resourceful PCs</span>
-            </List>
-        </div>
+        <List className={'dsr-work-history__history'}>
+            <>Full stack LAMP development with Apache, PHP, MySQL, HTML5, CSS3, Javascript (ES6).</>
+            <>Maintain and enhance a modern frontend tech stack grounded in NodeJS, WebPack, & Babel</>
+            <>Refactor and modernize legacy architecture to increase code reuse and reduce complexity</>
+            <>Work closely with the UX team to bring modern designs to the web from mockup</>
+            <>Interview and onboard new and established developers</>
+            <>Mentor new and established developers on coding best practices with a focus on frontend development</>
+            <>Migrated a unix-based dev environment over to Windows for fun with an added benefit of enabling developers to work on more resourceful PCs</>
+        </List>
         <label htmlFor={'work-history--2'} className={'dsr-work-history__toggle-label'}>
             <Header>
                 <span className={'dsr-work-history__title'}>Senior PHP Analyst</span>
@@ -46,17 +44,15 @@ module.exports = () => {
             </Header>
         </label>
         <input id={'work-history--2'} type={'checkbox'} className={'dsr-work-history__display-checkbox'}/>
-        <div className={'dsr-work-history__history'}>
-            <List>
-                <span>Maintain and support code for 7 consumer facing web apps deployed across 3 countries for a fortune 500 company</span>
-                <span>Greatly reduced fraudulent accounts by writing a top performing algorithm</span>
-                <span>Improved application stability by writing browser based automation test suites with Selenium</span>
-                <span>Support multiple projects at the same time by taking into account release date and priority</span>
-                <span>Instilled client confidence by meeting all deliverable deadlines</span>
-                <span>Facilitated the development life cycle by translating business requirements into critical code changes</span>
-                <span>Maintain codebase on a server that routes thousands of financial transactions</span>
-            </List>
-        </div>
+        <List className={'dsr-work-history__history'}>
+            <>Maintain and support code for 7 consumer facing web apps deployed across 3 countries for a fortune 500 company</>
+            <>Greatly reduced fraudulent accounts by writing a top performing algorithm</>
+            <>Improved application stability by writing browser based automation test suites with Selenium</>
+            <>Support multiple projects at the same time by taking into account release date and priority</>
+            <>Instilled client confidence by meeting all deliverable deadlines</>
+            <>Facilitated the development life cycle by translating business requirements into critical code changes</>
+            <>Maintain codebase on a server that routes thousands of financial transactions</>
+        </List>
         <label htmlFor={'work-history--3'} className={'dsr-work-history__toggle-label'}>
             <Header>
                 <span className={'dsr-work-history__title'}>Software Developer</span>
@@ -66,17 +62,15 @@ module.exports = () => {
             </Header>
         </label>
         <input id={'work-history--3'} type={'checkbox'} className={'dsr-work-history__display-checkbox'}/>
-        <div className={'dsr-work-history__history'}>
-            <List>
-                <span>Train new developers to program in Magic (programming language) with a focus on writing clean code</span>
-                <span>Work in an on-call environment, resolving pages to ensure systems remain available for users</span>
-                <span>Work in a remote setup, communicating with consultants and developers in a project management environment</span>
-                <span>Refactor large, highly coupled programs In order to improve overall performance</span>
-                <span>Validate user input and ensure data integrity for highly sensitive medical records</span>
-                <span>Communicate with clients, documenting and resolving their issues as the highest tier support</span>
-                <span>Develop Long Term Care software using the Magic programming language and the Microsoft Visual Source Safe versioning system</span>
-            </List>
-        </div>
+        <List className={'dsr-work-history__history'}>
+            <>Train new developers to program in Magic (programming language) with a focus on writing clean code</>
+            <>Work in an on-call environment, resolving pages to ensure systems remain available for users</>
+            <>Work in a remote setup, communicating with consultants and developers in a project management environment</>
+            <>Refactor large, highly coupled programs In order to improve overall performance</>
+            <>Validate user input and ensure data integrity for highly sensitive medical records</>
+            <>Communicate with clients, documenting and resolving their issues as the highest tier support</>
+            <>Develop Long Term Care software using the Magic programming language and the Microsoft Visual Source Safe versioning system</>
+        </List>
     </div>
 };
 
