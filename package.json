@@ -7,12 +7,14 @@
     "start": "node main.js",
     "start:inspect": "node --inspect main.js",
     "start:live": "npx nodemon main.js",
-    "start:dev": "npx supervisor --watch src --extensions js --exec node main.js",
     "build:dev": "node build/esbuild.js",
     "build:dev:watch": "node build/esbuild.js --watch",
     "build:prod": "node build/esbuild.js --prod",
     "build:prod:watch": "node build/esbuild.js --prod --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "deprecatedScripts": {
+    "start:dev": "npx supervisor --watch src --extensions js --exec node main.js"
   },
   "keywords": [],
   "author": "",

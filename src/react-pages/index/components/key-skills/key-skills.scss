@@ -3,7 +3,7 @@
 .dsr-key-skills {
 
   position: relative;
-  box-shadow: 0 2px 1px 0 site-common.$dsr-grey--darker;
+  box-shadow: 0 2px 1px 0 site-common.$dsr-blue;
   padding: 30px 12px;
   margin-bottom: 2px;
 
@@ -104,6 +104,27 @@
       + .dsr-key-skills__toggle-label + .dsr-key-skills__skills:first-of-type {
         max-height: 0;
       }
+    }
+  }
+}
+
+@media print {
+
+  .dsr-key-skills {
+
+    &__toggle {
+      &-label {
+        display: inline-flex !important;
+        width: fit-content;
+
+        &:after {
+          content: ' : ';
+        }
+      }
+    }
+
+    &__skills {
+      display: inline-flex;
     }
   }
 }
