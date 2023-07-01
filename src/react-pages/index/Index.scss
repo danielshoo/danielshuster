@@ -1,8 +1,9 @@
-@import url(https://fonts.googleapis.com/css2?family=Inter:wght@200&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&display=swap);
 
 * {
     box-sizing: border-box;
-    font-family: Inter;
+    font-weight: 300;
+    font-family: Inter, Arial, Helvetica, sans-serif;
 }
 
 html {

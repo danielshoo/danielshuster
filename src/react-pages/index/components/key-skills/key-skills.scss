@@ -1,0 +1,69 @@
+.dsr-key-skills {
+
+  position: relative;
+  box-shadow: 0 2px 1px 0 #0085FF;
+  padding: 30px 12px 0;
+
+  &__banner {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: calc(50% - 125px);
+    top: -1.25rem;
+    height: calc(1.25rem * 2);
+    background-color: white;
+    border: 1px solid #CBCBCB;
+    width: 250px;
+    text-align: center;
+
+    &-text {
+      font-size: 1.5rem;
+      font-family: Inter, Arial, Helvetica, sans-serif;
+      font-weight: 400;
+      margin-right: 10px;
+    }
+  }
+
+  &__display-checkbox {
+    appearance: none;
+    height: 0;
+    width: 0;
+    position: absolute;
+  }
+
+  &__display-toggle {
+    font-weight: 300;
+    font-size: 1.5rem;
+  }
+
+  &__skills {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 12px 0;
+  }
+
+  &__skill {
+    display: inline-block;
+    border: 1px solid #BFBFBF;
+    padding: 6px 10px;
+    border-radius: 7px;
+    margin-right: 10px;
+    margin-bottom: 8px;
+    width: fit-content  ;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .dsr-key-skills {
+    &__skills {
+      height: 0;
+      overflow: hidden;;
+    }
+
+    &__display-checkbox:checked + .dsr-key-skills__skills {
+      height: auto;
+    }
+  }
+}
