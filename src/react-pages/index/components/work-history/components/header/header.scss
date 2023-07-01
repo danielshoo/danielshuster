@@ -1,0 +1,38 @@
+@use 'src/css/site-common.scss';
+
+.dsr-work-header {
+
+  &__divider {
+
+  }
+
+  &__toggle-icon {
+    display: none;
+    width: 20px;
+    height: 20px;
+    background-color: site-common.$dsr-blue;
+    transition: all 0.3s ease;
+    clip-path: polygon(0 0, 50% 50%, 100% 0, 50% 100%, 50% 100%, 50% 100%);
+  }
+
+  &--dark {
+    @extend .dsr-work-header;
+
+    background-color: site-common.$dsr-blue;
+
+    .dsr-work-header__toggle-icon {
+      background-color: site-common.$dsr-white;
+    }
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .dsr-work-header {
+
+    &__toggle-icon {
+      float: right;
+      display: inline-block;
+      justify-self: flex-end;
+    }
+  }
+}

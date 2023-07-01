@@ -1,14 +1,13 @@
-
+const React = require('react');
 const express = require('express');
 const app = express();
 const ReactDomServer = require('react-dom/server');
-const MainPage = require('./src/react-pages/MainPage');
+const RcIndexPage = require('./src/react-pages/index/IndexHtmlWrapped');
 
 app.get('/', (req, res) => {
 
-    const React = require('react');
     const renderStream = ReactDomServer.renderToPipeableStream(
-        React.createElement(MainPage),
+        React.createElement(RcIndexPage),
         {
             onShellReady: () => {
                 res.statusCode = 200;
@@ -17,6 +16,8 @@ app.get('/', (req, res) => {
         }
     );
 });
+
+app.use(express.static('public'));
 
 app.listen(3000, () => {
     console.log('listening on port 3000');

@@ -1,0 +1,96 @@
+@use 'src/css/site-common.scss';
+
+.dsr-pro-summary {
+
+  padding: 35px 0;
+  box-shadow: 0 2px 1px 0 site-common.$dsr-blue;
+  margin-bottom: 2px;
+
+  &__name {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0;
+  }
+
+  &__selfie-img {
+    float: left;
+    shape-outside: circle(51%);
+    height: 200px;
+    width: 200px;
+    background-size: 100%;
+    clip-path: circle(50% at 50% 50%);
+    margin: 0 23px 0 12px;
+  }
+
+  &__title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0;
+  }
+
+  &__summary {
+    margin: 16px 12px 0;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  &--dark {
+    @extend .dsr-pro-summary;
+
+    color: site-common.$dsr-white;
+    background-color: site-common.$dsr-dark-blue;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .dsr-pro-summary {
+
+    &__name {
+      font-size: 1.85rem;
+      font-weight: 700;
+      margin-left: 12px;
+    }
+
+    &__selfie-img {
+      float: right;
+      height: 150px;
+      width: 150px;
+      right: 12px;
+      margin: 0 7px 0 0;
+    }
+
+    &__title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      margin-left: 12px;
+    }
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .dsr-pro-summary__name {
+    font-size: 1.45rem;
+    font-weight: 700;
+    margin-left: 12px;
+  }
+
+}
+
+@media print {
+  .dsr-pro-summary {
+
+    padding: 0 12px 25px;
+
+    &__selfie-img {
+      display: none;
+    }
+
+    &__summary {
+      margin: 0;
+    }
+
+    &__title {
+      margin-bottom: 10px;
+    }
+  }
+}

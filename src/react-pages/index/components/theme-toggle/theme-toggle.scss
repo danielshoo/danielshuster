@@ -1,0 +1,57 @@
+@use 'src/css/site-common.scss';
+
+.dsr-theme-toggle {
+
+    display: flex;
+    position: relative;
+    align-items: center;
+    height: 37px;
+    width: 123px;
+    background-color: site-common.$dsr-blue;
+    border-radius: 5000000px;
+    box-shadow: inset 0 0 4px 1px;
+    box-sizing: border-box;
+    justify-content: space-between;
+
+    &__icon-1, &__icon-2 {
+        display: flex;
+        height: calc(100% - 6px);
+        width: 50%;
+        margin: 2px 0;
+        justify-content: center;
+        svg {
+            height: 100%;
+        }
+    }
+
+    &__checkbox {
+        appearance: none;
+        display: block;
+        height: 0;
+        width: 0;
+        margin: 0;
+
+        &:checked ~ .dsr-theme-toggle .dsr-theme-toggle__switch {
+            margin-left: calc(50% - 4px);
+        }
+    }
+
+    &__switch {
+        width: 50%;
+        height: 80%;
+        float: right;
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        align-items: center;
+        border-radius: 500000000px;
+        background-color: white;
+        box-shadow: 0 0 4px 0;
+        margin-left: 4px;
+        transition: margin-left .3s ease-out;
+
+        &:before {
+            display: block;
+        }
+    }
+}

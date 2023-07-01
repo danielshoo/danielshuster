@@ -1,0 +1,103 @@
+@use 'src/css/site-common.scss';
+
+.dsr-work-history {
+
+  position: relative;
+  padding: 45px 12px 30px;
+  margin-bottom: 2px;
+
+  &__display-checkbox {
+    appearance: none;
+    height: 0;
+    width: 0;
+    position: absolute;
+  }
+
+  &__toggle {
+
+    &-label {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 300;
+      font-size: 1.3rem;
+    }
+
+    &-icon {
+      display: none;
+      width: 20px;
+      height: 20px;
+      background-color: site-common.$dsr-blue;
+    }
+  }
+
+  &--dark {
+    @extend .dsr-work-history;
+
+    background-color: site-common.$dsr-dark-blue;
+    color: site-common.$dsr-white;
+  }
+}
+
+@media screen and (max-width: 650px) {
+
+  .dsr-work-history {
+
+    &__timeframe, &__location {
+      display: none;
+
+      + .dsr-work-header__divider {
+        display: none;
+      }
+    }
+
+    &__company + .dsr-work-header__divider {
+      display: none;
+    }
+
+    .dsr-list {
+
+      display: grid;
+      grid-template-rows: 0fr;
+      overflow: hidden;
+      transition: grid-template-rows 1s;
+
+      &__ul {
+        min-height: 0;
+        transition: opacity 1s;
+        opacity: 0;
+      }
+    }
+
+    &__display-checkbox:checked {
+
+      + .dsr-work-history__toggle-label .dsr-work-header__toggle-icon {
+        clip-path: polygon(0 45%, 50% 45%, 100% 45%, 100% 55%, 50% 55%, 0% 55%);
+      }
+
+      + .dsr-work-history__toggle-label + .dsr-list {
+
+        grid-template-rows: 1fr;
+
+        .dsr-list__ul {
+            opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+@media print {
+
+  .dsr-work-history {
+
+    padding: 40px 12px;
+
+    &__toggle {
+      &-label {
+        font-weight: 500;
+        font-size: 1rem;
+      }
+    }
+  }
+}
