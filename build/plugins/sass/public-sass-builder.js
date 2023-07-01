@@ -13,10 +13,10 @@ const dirPublic = path.resolve(dirProjectRoot, 'public');
  * generates an output file for each entrypoint that requires SCSS. It also resolves the required module with
  * the CSS string.
  */
-module.exports = (writeCSSFile = false) => {
+module.exports = () => {
 
     return {
-        name: 'esbuild_sass_to_css',
+        name: 'public_sass_to_css',
         setup: function (build) {
 
             let resets = [];
@@ -38,10 +38,10 @@ module.exports = (writeCSSFile = false) => {
                 const parts = path.parse(publicFullPath);
                 const scssCompiled = sass.compile(scssFullPath, {loadPaths: [dirProjectRoot, dirSrc, dirPublic]});
                 const watchFiles = scssCompiled.loadedUrls.filter((urlObj) => urlObj.protocol === 'file:').map(url.fileURLToPath);
+                const outputPath = path.resolve(path.dirname(publicFullPath) + path.sep + parts.name + '.css');
+                const isEntryPoint = build.initialOptions.entryPoints.includes(publicFullPath);
 
-                if (writeCSSFile) {
-                    const outputPath = path.resolve(path.dirname(publicFullPath) + path.sep + parts.name + '.css');
-
+                if (isEntryPoint) {
                     if (!resets.includes(outputPath)) {
                         resets.push(outputPath);
                         fs.writeFileSync(outputPath, scssCompiled.css, {encoding: 'utf-8', flag: 'w'});
@@ -49,7 +49,6 @@ module.exports = (writeCSSFile = false) => {
                         fs.writeFileSync(outputPath, scssCompiled.css, {encoding: 'utf-8', flag: 'a'});
                     }
                 }
-
 
                 return {
                     watchFiles,

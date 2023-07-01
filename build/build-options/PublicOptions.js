@@ -1,6 +1,6 @@
 const path = require("node:path");
 const process = require("node:process");
-const esCustomSassBuilder = require("../plugins/sass/es-custom-sass-builder");
+const publicSassBuilder = require("../plugins/sass/public-sass-builder");
 
 const isProductionMode = process.argv.includes('--prod');
 const publicMainFile = path.resolve(__dirname, '..', '..', 'public', 'react-pages', 'main.ts');
@@ -14,5 +14,5 @@ module.exports = {
     tsconfig: path.resolve(__dirname, '..', '..', 'tsconfig.json'),
     bundle: true,
     minify: isProductionMode,
-    plugins: [esCustomSassBuilder(true)],
+    plugins: [publicSassBuilder()],
 };
