@@ -32,6 +32,7 @@
     "connect-livereload": "^0.6.1",
     "esbuild-plugin-handlebars": "^1.0.2",
     "nodemon": "^2.0.22",
+    "sass": "^1.63.3",
     "supervisor": "^0.12.0",
     "ts-node": "^10.9.1"
   }
