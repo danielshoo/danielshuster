@@ -11,6 +11,7 @@ module.exports = function Index() {
         <head>
             <title>Daniel Shuster - A Resume</title>
             <meta charSet="UTF-8"/>
+            <meta name={'viewport'} content={'width=device-width, initial-scale=1'}/>
             <script defer={true} src="/react-pages/main.js"></script>
             <IndexCssJsx/>
             <ThemeToggle.Style/>
