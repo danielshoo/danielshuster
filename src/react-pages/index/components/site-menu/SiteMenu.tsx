@@ -33,7 +33,7 @@ module.exports = () => {
             <a className={'dsr-site-menu__item'} target={'_blank'} href={'https://github.com/danielshoo/danielshuster'} aria-label={"Navigation link to github repo showcasing this resume page"}>
                 Github
             </a>
-            <a className={'dsr-site-menu__item'} target={'_blank'} href={'https://github.com/danielshoo/danielshuster'} aria-label={"Navigation link to figma design at figma.com"}>
+            <a className={'dsr-site-menu__item'} target={'_blank'} href={'https://www.figma.com/file/nK59bsOtPpbwy97qVhAQsQ/Resume?type=design&node-id=12-265&mode=design'} aria-label={"Navigation link to figma design at figma.com"}>
                 Figma
             </a>
         </div>
