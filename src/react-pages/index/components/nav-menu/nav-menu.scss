@@ -1,0 +1,35 @@
+.dsr-nav-menu {
+
+  height: 36px;
+  display: flex;
+  align-items: flex-end;
+
+  &__icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    width: 40px;
+    padding: 6px;
+    border: 1px solid #cecece;
+    border-radius: 8px;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__icon-bar {
+    width: 100%;
+    height: 3px;
+    border-radius: 2px;
+    background-color: black;
+  }
+
+  &__current-page-text {
+    position: relative;
+    font-size: 2rem;
+    margin-left: 8px;
+    top: 4px;
+  }
+}
