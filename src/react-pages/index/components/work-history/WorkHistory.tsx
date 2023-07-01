@@ -17,6 +17,7 @@ module.exports = () => {
                 <path fill="#292D32" d="M16.814 25H5.186a4.953 4.953 0 0 1-4.942-4.942v-.756a4.19 4.19 0 0 1 4.186-4.186h16.454a.88.88 0 0 1 .872.872v4.07A4.953 4.953 0 0 1 16.814 25ZM4.43 16.86a2.442 2.442 0 0 0-2.442 2.442v.756a3.196 3.196 0 0 0 3.198 3.198h11.628a3.196 3.196 0 0 0 3.198-3.198V16.86H4.43Zm11.221-9.302H6.35a.878.878 0 0 1-.872-.872c0-.477.395-.872.872-.872h9.302c.477 0 .872.395.872.872a.878.878 0 0 1-.872.872Zm-3.488 4.07H6.349a.878.878 0 0 1-.872-.872c0-.477.395-.872.872-.872h5.814c.476 0 .872.395.872.872a.878.878 0 0 1-.872.872Z"/>
             </svg>
         </SectionBanner>
+        <input id={'work-history--1'} type={'checkbox'} className={'dsr-work-history__display-checkbox'}/>
         <label htmlFor={'work-history--1'} className={'dsr-work-history__toggle-label'}>
             <Header>
                 <span className={'dsr-work-history__title'}>Senior FE Lead</span>
@@ -25,7 +26,6 @@ module.exports = () => {
                 <span className={'dsr-work-history__location'}>Remote</span>
             </Header>
         </label>
-        <input id={'work-history--1'} type={'checkbox'} className={'dsr-work-history__display-checkbox'}/>
         <List className={'dsr-work-history__history'}>
             <>Full stack LAMP development with Apache, PHP, MySQL, HTML5, CSS3, Javascript (ES6).</>
             <>Maintain and enhance a modern frontend tech stack grounded in NodeJS, WebPack, & Babel</>
@@ -35,6 +35,7 @@ module.exports = () => {
             <>Mentor new and established developers on coding best practices with a focus on frontend development</>
             <>Migrated a unix-based dev environment over to Windows for fun with an added benefit of enabling developers to work on more resourceful PCs</>
         </List>
+        <input id={'work-history--2'} type={'checkbox'} className={'dsr-work-history__display-checkbox'}/>
         <label htmlFor={'work-history--2'} className={'dsr-work-history__toggle-label'}>
             <Header>
                 <span className={'dsr-work-history__title'}>Senior PHP Analyst</span>
@@ -43,7 +44,6 @@ module.exports = () => {
                 <span className={'dsr-work-history__location'}>Remote</span>
             </Header>
         </label>
-        <input id={'work-history--2'} type={'checkbox'} className={'dsr-work-history__display-checkbox'}/>
         <List className={'dsr-work-history__history'}>
             <>Maintain and support code for 7 consumer facing web apps deployed across 3 countries for a fortune 500 company</>
             <>Greatly reduced fraudulent accounts by writing a top performing algorithm</>
@@ -53,6 +53,7 @@ module.exports = () => {
             <>Facilitated the development life cycle by translating business requirements into critical code changes</>
             <>Maintain codebase on a server that routes thousands of financial transactions</>
         </List>
+        <input id={'work-history--3'} type={'checkbox'} className={'dsr-work-history__display-checkbox'}/>
         <label htmlFor={'work-history--3'} className={'dsr-work-history__toggle-label'}>
             <Header>
                 <span className={'dsr-work-history__title'}>Software Developer</span>
@@ -61,7 +62,6 @@ module.exports = () => {
                 <span className={'dsr-work-history__location'}>Coral Springs, Fl</span>
             </Header>
         </label>
-        <input id={'work-history--3'} type={'checkbox'} className={'dsr-work-history__display-checkbox'}/>
         <List className={'dsr-work-history__history'}>
             <>Train new developers to program in Magic (programming language) with a focus on writing clean code</>
             <>Work in an on-call environment, resolving pages to ensure systems remain available for users</>

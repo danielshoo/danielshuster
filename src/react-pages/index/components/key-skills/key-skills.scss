@@ -25,11 +25,6 @@
 
     &-icon {
       display: none;
-      width: 20px;
-      height: 20px;
-      background-color: #0085FF;
-      transition: transform 0.3s ease;
-      clip-path: polygon(0 0, 50% 50%, 100% 0, 50% 100%, 0 0);
     }
   }
 
@@ -60,15 +55,29 @@
     &__toggle {
       &-icon {
         display: block;
+        width: 20px;
+        height: 20px;
+        background-color: #0085FF;
+        transition: all 0.3s ease;
+        clip-path: polygon(0 0, 50% 50%, 100% 0, 50% 100%, 50% 100%, 50% 100%);
       }
     }
 
-    &__display-checkbox:checked + .dsr-key-skills__skills {
-      height: auto;
+    &__display-checkbox:checked {
+
+      + .dsr-key-skills__toggle-label .dsr-key-skills__toggle-icon {
+        clip-path: polygon(0 45%, 50% 45%, 100% 45%, 100% 55%, 50% 55%, 0% 55%);
+      }
+
+      + .dsr-key-skills__toggle-label + .dsr-key-skills__skills {
+        height: auto;
+      }
     }
 
-    &__display-checkbox:not(:checked) + .dsr-key-skills__skills {
-      display: none;
+    &__display-checkbox:not(:checked) {
+      + .dsr-key-skills__toggle-label + .dsr-key-skills__skills:first-of-type {
+        display: none;
+      }
     }
   }
 }

@@ -63,9 +63,17 @@
       overflow: hidden;
     }
 
-    &__display-checkbox:checked + .dsr-work-history__history {
-      height: auto;
+    &__display-checkbox:checked {
+
+      + .dsr-work-history__toggle-label .dsr-work-header__toggle-icon {
+        clip-path: polygon(0 45%, 50% 45%, 100% 45%, 100% 55%, 50% 55%, 0% 55%);
+      }
+
+      + .dsr-work-history__toggle-label + .dsr-work-history__history {
+        height: auto;
+      }
     }
+
   }
 }
 

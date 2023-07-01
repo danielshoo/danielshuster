@@ -9,7 +9,8 @@
     width: 20px;
     height: 20px;
     background-color: #0085FF;
-    clip-path: polygon(0 0, 50% 50%, 100% 0, 50% 100%, 0 0);
+    transition: all 0.3s ease;
+    clip-path: polygon(0 0, 50% 50%, 100% 0, 50% 100%, 50% 100%, 50% 100%);
   }
 }
 
