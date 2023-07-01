@@ -2,10 +2,16 @@
     box-sizing: border-box;
 }
 
-html, body {
-    max-width: 1000px;
+html {
+    background-color: #e7e7e7;
 }
 
-.dsr-index {
+body {
+    width: 1000px;
+    background-color: white;
+}
 
+html, body {
+    margin: 0 auto;
+    max-width: 1000px;
 }
