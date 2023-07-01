@@ -12,9 +12,9 @@ module.exports = () => {
     return <div className={'dsr-work-history'}>
         <SectionBanner>
             <span className={'dsr-section-banner__text'}>Work History</span>
-            <svg className={'dsr-section-banner__icon'} xmlns="http://www.w3.org/2000/svg" width="24" height="23" fill="none" viewBox="0 0 24 23">
-                <path stroke="#292D32" strokeLinecap={"round"} strokeLinejoin={"round"} strokeWidth={"2"} d="M12.389 8.224H17.9m-11.801 0 .788.787L9.249 6.65m3.14 8.924H17.9m-11.801 0 .788.787L9.249 14"/>
-                <path stroke="#292D32" strokeLinecap={"round"} strokeLinejoin={"round"} strokeWidth={"2"}    d="M8.85 22h6.3c5.25 0 7.35-2.1 7.35-7.35v-6.3C22.5 3.1 20.4 1 15.15 1h-6.3C3.6 1 1.5 3.1 1.5 8.35v6.3C1.5 19.9 3.6 22 8.85 22Z"/>
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="25" fill="none" viewBox="0 0 22 25">
+                <path fill="#292D32" d="M1.116 20.349a.878.878 0 0 1-.872-.872V6.686C.244 1.558 1.802 0 6.93 0h8.14c5.128 0 6.686 1.558 6.686 6.686v11.628c0 .186 0 .36-.012.546a.887.887 0 0 1-.93.814.88.88 0 0 1-.814-.93c.012-.14.012-.29.012-.43V6.686c0-4.151-.78-4.942-4.942-4.942H6.93c-4.163 0-4.942.79-4.942 4.942v12.79a.878.878 0 0 1-.872.873Z"/>
+                <path fill="#292D32" d="M16.814 25H5.186a4.953 4.953 0 0 1-4.942-4.942v-.756a4.19 4.19 0 0 1 4.186-4.186h16.454a.88.88 0 0 1 .872.872v4.07A4.953 4.953 0 0 1 16.814 25ZM4.43 16.86a2.442 2.442 0 0 0-2.442 2.442v.756a3.196 3.196 0 0 0 3.198 3.198h11.628a3.196 3.196 0 0 0 3.198-3.198V16.86H4.43Zm11.221-9.302H6.35a.878.878 0 0 1-.872-.872c0-.477.395-.872.872-.872h9.302c.477 0 .872.395.872.872a.878.878 0 0 1-.872.872Zm-3.488 4.07H6.349a.878.878 0 0 1-.872-.872c0-.477.395-.872.872-.872h5.814c.476 0 .872.395.872.872a.878.878 0 0 1-.872.872Z"/>
             </svg>
         </SectionBanner>
         <label htmlFor={'work-history--1'} className={'dsr-work-history__toggle-label'}>
