@@ -7,6 +7,7 @@ const NavigationBar = require('./components/navigation-bar/NavigationBar');
 const NavMenu = require('./components/nav-menu/NavMenu');
 const ProfessionalSummary = require('./components/professional-summary/ProfessionalSummary');
 const KeySkills = require('./components/key-skills/KeySkills');
+const SectionBanner = require('./components/section-banner/SectionBanner');
 
 module.exports = function Index() {
     return <html>
@@ -22,6 +23,7 @@ module.exports = function Index() {
             <NavMenu.Style/>
             <ProfessionalSummary.Style/>
             <KeySkills.Style/>
+            <SectionBanner.Style/>
         </head>
         <body>
             <div id="root" className={'dsr-index'}>

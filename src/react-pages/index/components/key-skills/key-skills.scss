@@ -4,28 +4,6 @@
   box-shadow: 0 2px 1px 0 #0085FF;
   padding: 30px 12px 0;
 
-  &__banner {
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    left: calc(50% - 125px);
-    top: -1.25rem;
-    height: calc(1.25rem * 2);
-    background-color: white;
-    border: 1px solid #CBCBCB;
-    width: 250px;
-    text-align: center;
-
-    &-text {
-      font-size: 1.5rem;
-      font-family: Inter, Arial, Helvetica, sans-serif;
-      font-weight: 400;
-      margin-right: 10px;
-    }
-  }
-
   &__display-checkbox {
     appearance: none;
     height: 0;

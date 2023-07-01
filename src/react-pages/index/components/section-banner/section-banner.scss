@@ -1,0 +1,21 @@
+.dsr-section-banner {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: calc(50% - 125px);
+  top: -1.25rem;
+  height: calc(1.25rem * 2);
+  background-color: white;
+  border: 1px solid #CBCBCB;
+  width: 250px;
+  text-align: center;
+
+  &__text {
+    font-size: 1.35rem;
+    font-family: Inter, Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    margin-right: 10px;
+  }
+}
