@@ -15,7 +15,17 @@ module.exports = () => {
         globalCTX.setDoShowSiteMenu(false);
     }
 
-    return <section className={className} aria-label={'Site Navigation Menu'} onClick={doHideSiteMenu}>
+    function handleKeyDown(e) {
+        if (e.key === 'Escape') {
+            globalCTX.setDoShowSiteMenu(false);
+        }
+    }
+
+    function handleFocusSection(e) {
+        e.currentTarget.focus();
+    }
+
+    return <section tabIndex={0} className={className} aria-label={'Site Navigation Menu'} onClick={doHideSiteMenu} onKeyDown={handleKeyDown} onMouseOver={handleFocusSection}>
         <div className={'dsr-site-menu__items'}>
             <div className={'dsr-site-menu__item'} aria-label={'Home'}>Home</div>
             <div className={'dsr-site-menu__item'} aria-label={'Resumé'}>Resumé</div>
