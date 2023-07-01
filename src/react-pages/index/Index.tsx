@@ -5,6 +5,7 @@ const ThemeToggle = require('./components/theme-toggle/ThemeToggle');
 const Search = require('./components/search/Search');
 const NavigationBar = require('./components/navigation-bar/NavigationBar');
 const NavMenu = require('./components/nav-menu/NavMenu');
+const ProfessionalSummary = require('./components/professional-summary/ProfessionalSummary');
 
 module.exports = function Index() {
     return <html>
@@ -18,6 +19,7 @@ module.exports = function Index() {
             <NavigationBar.Style/>
             <Search.Style/>
             <NavMenu.Style/>
+            <ProfessionalSummary.Style/>
         </head>
         <body>
             <div id="root" className={'dsr-index'}>
@@ -26,6 +28,8 @@ module.exports = function Index() {
                     <Search/>
                     <ThemeToggle/>
                 </NavigationBar>
+                <ProfessionalSummary selfie={'/selfie.jpeg'}>
+                </ProfessionalSummary>
             </div>
         </body>
     </html>;

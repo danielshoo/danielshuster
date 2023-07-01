@@ -1,0 +1,70 @@
+.dsr-pro-summary {
+
+  padding: 30px 0;
+  box-shadow: 0 2px 1px 0 #0085FF;
+
+  &__name {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0 0 0 201px;
+  }
+
+  &__selfie-img {
+    float: left;
+    shape-outside: circle(50%);
+    height: 200px;
+    width: 200px;
+    background: url(selfie.jpeg);
+    background-size: 250%;
+    background-position-x: 50%;
+    background-position-y: 50%;
+    clip-path: circle(50% at 50% 50%);
+    margin: 0 23px 0 12px;
+  }
+
+  &__title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0 0 0 225px;
+  }
+
+  &__summary {
+    margin: 16px 12px 0;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .dsr-pro-summary {
+
+    &__name {
+      font-size: 1.85rem;
+      font-weight: 700;
+      margin-left: 12px;
+    }
+
+    &__selfie-img {
+      float: right;
+      height: 150px;
+      width: 150px;
+      right: 12px;
+      margin: 0 7px 0 0;
+    }
+
+    &__title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      margin-left: 12px;
+    }
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .dsr-pro-summary__name {
+    font-size: 1.45rem;
+    font-weight: 700;
+    margin-left: 12px;
+  }
+
+}
