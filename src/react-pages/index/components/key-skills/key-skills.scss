@@ -1,5 +1,9 @@
 @use 'src/css/site-common.scss';
 
+.print-media__added-item {
+  display: none;
+}
+
 .dsr-key-skills {
 
   position: relative;
@@ -110,6 +114,14 @@
 
 @media print {
 
+  .print-media__added-item {
+    display: inline;
+  }
+
+  .print-media__removed-item {
+    display: none;
+  }
+
   .dsr-key-skills {
 
     padding: 40px 12px;
@@ -131,5 +143,4 @@
       padding: 0;
     }
   }
-
 }
