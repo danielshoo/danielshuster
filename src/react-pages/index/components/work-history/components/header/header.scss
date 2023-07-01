@@ -1,0 +1,24 @@
+.dsr-work-header {
+
+  &__divider {
+
+  }
+
+  &__toggle-icon {
+    display: none;
+    width: 20px;
+    height: 20px;
+    background-color: #0085FF;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .dsr-work-header {
+
+    &__toggle-icon {
+      float: right;
+      display: inline-block;
+      justify-self: flex-end;
+    }
+  }
+}

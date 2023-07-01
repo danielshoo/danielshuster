@@ -1,0 +1,70 @@
+.dsr-work-history {
+
+  position: relative;
+  padding: 45px 12px 30px;
+
+  &__display-checkbox {
+    appearance: none;
+    height: 0;
+    width: 0;
+    position: absolute;
+  }
+
+  &__toggle {
+
+    &-label {
+      display: block;
+      font-weight: 300;
+      font-size: 1.3rem;
+    }
+
+    &-icon {
+      display: none;
+      width: 20px;
+      height: 20px;
+      background-color: #0085FF;
+      transition: transform 0.3s ease;
+    }
+  }
+
+  &__history {
+
+    padding: 12px 0;
+
+    ul {
+      padding-left: 24px;
+    }
+  }
+}
+
+@media screen and (max-width: 650px) {
+
+  .dsr-work-history {
+
+    &__timeframe, &__location {
+      display: none;
+
+      + .dsr-work-header__divider {
+        display: none;
+      }
+    }
+
+    &__company + .dsr-work-header__divider {
+      display: none;
+    }
+
+    &__history {
+      height: 0;
+      overflow: hidden;
+
+      & ul {
+        padding-left: 12px;
+      }
+    }
+
+    &__display-checkbox:checked + .dsr-work-history__history {
+      height: auto;
+    }
+  }
+}
+

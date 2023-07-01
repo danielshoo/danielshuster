@@ -8,6 +8,7 @@ const NavMenu = require('./components/nav-menu/NavMenu');
 const ProfessionalSummary = require('./components/professional-summary/ProfessionalSummary');
 const KeySkills = require('./components/key-skills/KeySkills');
 const SectionBanner = require('./components/section-banner/SectionBanner');
+const WorkHistory = require('./components/work-history/WorkHistory');
 
 module.exports = function Index() {
     return <html>
@@ -24,6 +25,7 @@ module.exports = function Index() {
             <ProfessionalSummary.Style/>
             <KeySkills.Style/>
             <SectionBanner.Style/>
+            <WorkHistory.Style/>
         </head>
         <body>
             <div id="root" className={'dsr-index'}>
@@ -32,9 +34,11 @@ module.exports = function Index() {
                     <Search/>
                     <ThemeToggle/>
                 </NavigationBar>
-                <ProfessionalSummary selfie={'/selfie.jpeg'}>
+                <ProfessionalSummary>
                 </ProfessionalSummary>
-                <KeySkills></KeySkills>
+                <KeySkills/>
+                <WorkHistory/>
+
             </div>
         </body>
     </html>;
