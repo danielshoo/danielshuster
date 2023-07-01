@@ -11,11 +11,12 @@
   transition: width .3s ease-out, height .3s ease-out, opacity .3s ease-out;
 
   &--dark {
+
     .dsr-site-menu__items {
       background-color: site-common.$dsr-dark-blue;
     }
 
-    .dsr-site-menu__item {
+    .dsr-site-menu__item, .dsr-site-menu__item-set-description {
       color: site-common.$dsr-white;
     }
   }

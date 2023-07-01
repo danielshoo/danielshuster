@@ -24,6 +24,7 @@
     background-color: site-common.$dsr-grey--lighter;
 
     &--dark {
+        color: site-common.$dsr-white;
         background-color: site-common.$dsr-blue;
     }
 }
@@ -55,6 +56,7 @@ html, body {
         font-style: italic;
         text-align: center;
         grid-column: span 2;
+        margin-right: 10px;
     }
 
     .dsr-index {
@@ -65,15 +67,15 @@ html, body {
         grid-template-rows: auto auto auto auto;
         grid-template-columns: 1fr 250px;
 
-        .dsr-pro-summary {
+        .dsr-pro-summary, .dsr-pro-summary--dark {
             grid-column: span 2;
         }
 
-        .dsr-key-skills {
+        .dsr-key-skills, .dsr-key-skills--dark {
             grid-column: 2;
         }
 
-        .dsr-work-history {
+        .dsr-work-history, .dsr-work-history--dark {
             grid-row: 2;
             grid-column: 1;
         }
