@@ -7,7 +7,6 @@ module.exports = function ThemeToggle() {
     const toggleID = (Math.random() * 100000).toFixed(0);
 
     return <span>
-        {<ThemeToggleStyle/>}
         <input id={'theme-toggle-'+toggleID} type={'checkbox'} className={"dsr-theme-toggle__checkbox"}/>
         <label htmlFor={'theme-toggle-'+toggleID} className="dsr-theme-toggle">
             <span className="dsr-theme-toggle__icon-1">
@@ -20,3 +19,5 @@ module.exports = function ThemeToggle() {
         </label>
     </span>
 }
+
+module.exports.Style = ThemeToggleStyle;
