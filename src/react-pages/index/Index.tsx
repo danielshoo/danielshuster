@@ -36,7 +36,7 @@ module.exports = function Index() {
             <SiteMenu/>
             <NavigationBar>
                 <NavMenu currentPage={'Resumé'}/>
-                <Search/>
+                {/*<Search/>*/}
                 <ThemeToggle/>
             </NavigationBar>
             <ProfessionalSummary>

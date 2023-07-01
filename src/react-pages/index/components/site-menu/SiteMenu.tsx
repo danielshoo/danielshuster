@@ -25,11 +25,17 @@ module.exports = () => {
         e.currentTarget.focus();
     }
 
-    return <section tabIndex={0} className={className} aria-label={'Site Navigation Menu'} onClick={doHideSiteMenu} onKeyDown={handleKeyDown} onMouseOver={handleFocusSection}>
+    return <section tabIndex={0} className={className} onClick={doHideSiteMenu} onKeyDown={handleKeyDown} onMouseOver={handleFocusSection} aria-label={'Section containing navigation links to pages related to this resume site'}>
         <div className={'dsr-site-menu__items'}>
-            <div className={'dsr-site-menu__item'} aria-label={'Home'}>Home</div>
-            <div className={'dsr-site-menu__item'} aria-label={'Resumé'}>Resumé</div>
-            <div className={'dsr-site-menu__item'} aria-label={'Portfolio'}>Portfolio</div>
+            <p className={'dsr-site-menu__item-set-description'} aria-label={"short description of this resume page's building blocks"}>
+                This resume page was designed on figma and coded with SSR React + Typescript. Check the links below for details on each.
+            </p>
+            <a className={'dsr-site-menu__item'} target={'_blank'} href={'https://github.com/danielshoo/danielshuster'} aria-label={"Navigation link to github repo showcasing this resume page"}>
+                Github
+            </a>
+            <a className={'dsr-site-menu__item'} target={'_blank'} href={'https://github.com/danielshoo/danielshuster'} aria-label={"Navigation link to figma design at figma.com"}>
+                Figma
+            </a>
         </div>
     </section>
 }

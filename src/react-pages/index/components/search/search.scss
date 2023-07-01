@@ -1,5 +1,10 @@
 @use 'src/css/site-common.scss';
 
+.is-search-highlighted {
+  background-color: site-common.$dsr-yellow;
+  color: black !important;
+}
+
 .dsr-search {
 
   position: relative;

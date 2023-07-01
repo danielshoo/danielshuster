@@ -13,6 +13,9 @@
   &--dark {
     .dsr-site-menu__items {
       background-color: site-common.$dsr-dark-blue;
+    }
+
+    .dsr-site-menu__item {
       color: site-common.$dsr-white;
     }
   }
@@ -29,30 +32,40 @@
     flex-direction: column;
     padding: 20px 0 0 20px;
     background-color: white;
-    width: 200px;
+    width: 300px;
     height: 390px;
     opacity: 1;
-    clip-path: path("M 0 0 L 180 0 C 200 0, 200 30, 180 30 s -20 30, 0 30 s 20 30, 0 30 s -20 30, 0 30 s 20 30, 0 30 s -20 30, 0 30 s 20 30, 0 30 s -20 30, 0 30 s 20 30, 0 30 s -20 30, 0 30 s 20 30, 0 30 s -20 30, 0 30 s 20 30, 0 30 s -20 30, 0 30 s 20 30, 0 30 L 0 400 L 0 0");
-
-    &:hover {
-      animation: wiggle 3s infinite;
-    }
+    clip-path: path("M 0 0 L 280 0 C 300 0, 300 30, 280 30 s -20 30, 0 30 s 20 30, 0 30 s -20 30, 0 30 s 20 30, 0 30 s -20 30, 0 30 s 20 30, 0 30 s -20 30, 0 30 s 20 30, 0 30 s -20 30, 0 30 s 20 30, 0 30 s -20 30, 0 30 s 20 30, 0 30 s -20 30, 0 30 s 20 30, 0 30 L 0 400 L 0 0");
+    animation: wiggle 3s infinite;
 
     @keyframes wiggle {
       0% {
-        clip-path: path("M 0 0 L 180 0 C 200 0, 200 30, 180 30 s -20 30, 0 30 s 20 30, 0 30 s -20 30, 0 30 s 20 30, 0 30 s -20 30, 0 30 s 20 30, 0 30 s -20 30, 0 30 s 20 30, 0 30 s -20 30, 0 30 s 20 30, 0 30 s -20 30, 0 30 s 20 30, 0 30 s -20 30, 0 30 s 20 30, 0 30 L 0 400 L 0 0");
+        clip-path: path("M 0 0 L 280 0 C 300 0, 300 30, 280 30 s -20 30, 0 30 s 20 30, 0 30 s -20 30, 0 30 s 20 30, 0 30 s -20 30, 0 30 s 20 30, 0 30 s -20 30, 0 30 s 20 30, 0 30 s -20 30, 0 30 s 20 30, 0 30 s -20 30, 0 30 s 20 30, 0 30 s -20 30, 0 30 s 20 30, 0 30 L 0 400 L 0 0");
       }
       50% {
-        clip-path: path("M 0 0 L 180 0 C 190 0, 190 30, 180 30 s -10 30, 0 30 s 10 30, 0 30 s -10 30, 0 30 s 10 30, 0 30 s -10 30, 0 30 s 10 30, 0 30 s -10 30, 0 30 s 10 30, 0 30 s -10 30, 0 30 s 10 30, 0 30 s -10 30, 0 30 s 10 30, 0 30 s -10 30, 0 30 s 10 30, 0 30 L 0 400 L 0 0");
+        clip-path: path("M 0 0 L 280 0 C 290 0, 290 30, 280 30 s -10 30, 0 30 s 10 30, 0 30 s -10 30, 0 30 s 10 30, 0 30 s -10 30, 0 30 s 10 30, 0 30 s -10 30, 0 30 s 10 30, 0 30 s -10 30, 0 30 s 10 30, 0 30 s -10 30, 0 30 s 10 30, 0 30 s -10 30, 0 30 s 10 30, 0 30 L 0 400 L 0 0");
       }
       100% {
-        clip-path: path("M 0 0 L 180 0 C 200 0, 200 30, 180 30 s -20 30, 0 30 s 20 30, 0 30 s -20 30, 0 30 s 20 30, 0 30 s -20 30, 0 30 s 20 30, 0 30 s -20 30, 0 30 s 20 30, 0 30 s -20 30, 0 30 s 20 30, 0 30 s -20 30, 0 30 s 20 30, 0 30 s -20 30, 0 30 s 20 30, 0 30 L 0 400 L 0 0");
+        clip-path: path("M 0 0 L 280 0 C 300 0, 300 30, 280 30 s -20 30, 0 30 s 20 30, 0 30 s -20 30, 0 30 s 20 30, 0 30 s -20 30, 0 30 s 20 30, 0 30 s -20 30, 0 30 s 20 30, 0 30 s -20 30, 0 30 s 20 30, 0 30 s -20 30, 0 30 s 20 30, 0 30 s -20 30, 0 30 s 20 30, 0 30 L 0 400 L 0 0");
       }
     }
   }
 
+  &__item-set-description {
+    width: 255px;
+    text-wrap: balance;
+    margin: 0 0 10px 0;
+  }
+
   &__item {
+    color: black;
     font-size: 2rem;
     margin-bottom: 20px;
+    text-decoration: none;
+    width: fit-content;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }
