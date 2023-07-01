@@ -12,6 +12,7 @@
   }
 
   &__toggle {
+
     &-label {
 
       display: flex;
@@ -28,6 +29,7 @@
       height: 20px;
       background-color: #0085FF;
       transition: transform 0.3s ease;
+      clip-path: polygon(0 0, 50% 50%, 100% 0, 50% 100%, 0 0);
     }
   }
 

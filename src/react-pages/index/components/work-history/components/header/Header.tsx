@@ -12,9 +12,7 @@ module.exports = (props) => {
         }
     }
 
-    children.push(<span className={'dsr-work-header__toggle-icon'}></span>)
-
-    return children;
+    return <><span>{children}</span><span className={'dsr-work-header__toggle-icon'}></span></>;
 }
 
 module.exports.Style = () => <style>{workHistoryCss}</style>;
