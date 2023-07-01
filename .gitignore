@@ -1,4 +1,9 @@
-**/*.js
-**/*.js.map
+main.js
+main.js.map
+src/**/*.js
+src/**/*.js.map
+public/**/*.js.map
+public/**/*.css
+public/**/*.css.map
 .idea/
 node_modules/
