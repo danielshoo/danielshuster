@@ -1,6 +1,7 @@
 const path = require("node:path");
 const sass = require("sass");
 const fs = require("node:fs");
+const url = require("url");
 
 const dirProjectRoot = path.resolve(__dirname, '..', '..', '..');
 const dirSrc = path.resolve(dirProjectRoot, 'src');
@@ -20,7 +21,7 @@ module.exports = (writeCSSFile = false) => {
 
             let resets = [];
 
-            build.onStart(result => {
+            build.onStart(() => {
                 resets = [];
             })
 
@@ -35,21 +36,23 @@ module.exports = (writeCSSFile = false) => {
                 });
 
                 const parts = path.parse(publicFullPath);
-                const scssFileContents = sass.compile(scssFullPath, {loadPaths: [dirProjectRoot, dirSrc, dirPublic]}).css;
+                const scssCompiled = sass.compile(scssFullPath, {loadPaths: [dirProjectRoot, dirSrc, dirPublic]});
+                const watchFiles = scssCompiled.loadedUrls.filter((urlObj) => urlObj.protocol === 'file:').map(url.fileURLToPath);
 
                 if (writeCSSFile) {
                     const outputPath = path.resolve(path.dirname(publicFullPath) + path.sep + parts.name + '.css');
 
                     if (!resets.includes(outputPath)) {
                         resets.push(outputPath);
-                        fs.writeFileSync(outputPath, scssFileContents, {encoding: 'utf-8', flag: 'w'});
+                        fs.writeFileSync(outputPath, scssCompiled.css, {encoding: 'utf-8', flag: 'w'});
                     } else {
-                        fs.writeFileSync(outputPath, scssFileContents, {encoding: 'utf-8', flag: 'a'});
+                        fs.writeFileSync(outputPath, scssCompiled.css, {encoding: 'utf-8', flag: 'a'});
                     }
                 }
 
 
                 return {
+                    watchFiles,
                     path: scssFullPath,
                     namespace: 'file',
                 };
