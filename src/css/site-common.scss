@@ -8,8 +8,16 @@ $dsr-grey--lighter: #E7E7E7;
 $dsr-grey: #CBCBCB;
 $dsr-grey--darker: #BFBFBF;
 
-//@import url(https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&display=swap);
 
+.print-media__removed-item {
+  display: none;
+}
+
+@media print {
+  .print-media__added-item {
+    display: inline;
+  }
+}
 
 /* cyrillic-ext */
 @font-face {

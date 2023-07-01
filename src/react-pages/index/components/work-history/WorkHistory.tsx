@@ -15,7 +15,7 @@ module.exports = () => {
     const globalCTX = React.useContext(GlobalContext);
     const rootClassname = globalCTX.theme === 'dark' ? 'dsr-work-history--dark' : 'dsr-work-history'
 
-    return <div className={rootClassname}>
+    return <section className={rootClassname}>
         <SectionBanner>
             <span className={'dsr-section-banner__text'}>Work History</span>
             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="25" fill="none" viewBox="0 0 22 25">
@@ -77,7 +77,7 @@ module.exports = () => {
             <>Communicate with clients, documenting and resolving their issues as the highest tier support</>
             <>Develop Long Term Care software using the Magic programming language and the Microsoft Visual Source Safe versioning system</>
         </List>
-    </div>
+    </section>
 };
 
 module.exports.Style = () => <style>{workHistoryCss + sectionBannerCss + headerCss}</style>;

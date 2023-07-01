@@ -47,17 +47,16 @@ module.exports = () => {
         <label htmlFor={'key-skills--3'} className={'dsr-key-skills__toggle-label'}>Paradigms<span className={'dsr-key-skills__toggle-icon'}></span></label>
         <div className={'dsr-key-skills__skills'}>
             <div className={'dsr-key-skills__skills-row'}>
-                <span className={'dsr-key-skills__skill'}>Object Oriented Programming</span>
-                <span className={'dsr-key-skills__skill'}>Functional Programming</span>
+                <span className={'dsr-key-skills__skill'}><span className={'print-media__removed-item'}>Object Oriented Programming</span><span className={'print-media__added-item'}>OOP</span></span>
+                <span className={'dsr-key-skills__skill'}><span className={'print-media__removed-item'}>Functional Programming</span><span className={'print-media__added-item'}>Functional</span></span>
                 <span className={'dsr-key-skills__skill'}>BEM Notation</span>
-                <span className={'dsr-key-skills__skill'}>Mobile First Development</span>
-                <span className={'dsr-key-skills__skill'}>Web Components</span>
-                <span className={'dsr-key-skills__skill'}>Wordpress Plugin Development</span>
-                <span className={'dsr-key-skills__skill'}>Wordpress Theme Development</span>
-                <span className={'dsr-key-skills__skill'}>Application Development</span>
-                <span className={'dsr-key-skills__skill'}>Test Driven Development</span>
-                <span className={'dsr-key-skills__skill'}>Database Normalization</span>
-                <span className={'dsr-key-skills__skill'}>RESTful Services</span>
+                <span className={'dsr-key-skills__skill'}>Mobile First</span>
+                <span className={'dsr-key-skills__skill'}>Componentization</span>
+                <span className={'dsr-key-skills__skill'}>Wordpress</span>
+                <span className={'dsr-key-skills__skill'}>App Development</span>
+                <span className={'dsr-key-skills__skill'}><span className={'print-media__removed-item'}>Test Driven Development</span><span className={'print-media__added-item'}>TDD</span></span>
+                <span className={'dsr-key-skills__skill'}><span className={'print-media__removed-item'}>Database Normalization</span><span className={'print-media__added-item'}>DB Normalization</span></span>
+                <span className={'dsr-key-skills__skill'}>RESTful</span>
             </div>
         </div>
         <input id={'key-skills--4'} type={'checkbox'} className={'dsr-key-skills__display-checkbox'}/>

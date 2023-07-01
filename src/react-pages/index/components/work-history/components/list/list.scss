@@ -1,0 +1,26 @@
+.dsr-list {
+
+  margin: 12px 0;
+  overflow: hidden;
+
+  &__ul {
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    transition: visibility 1s;
+    padding-left: 24px;
+    line-height: 1.5rem;
+  }
+
+  &__li {
+    display: list-item;
+    list-style-type: disc;
+    margin-bottom: 10px;
+  }
+}
+
+@media print {
+  .dsr-list__li {
+    line-height: 1.2;
+  }
+}

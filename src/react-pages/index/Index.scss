@@ -13,7 +13,6 @@
 
 * {
     box-sizing: border-box;
-    font-weight: 300;
     font-family: Inter, Arial, sans-serif;
 }
 
@@ -41,4 +40,43 @@ html, body {
 
 @page  {
     margin: 0;
+}
+
+.dsr-index__printed-text {
+    display: none;
+}
+
+@media print {
+
+    .dsr-index__printed-text {
+        display: inline;
+        position: absolute;
+        right: 0;
+        font-style: italic;
+        text-align: center;
+        grid-column: span 2;
+    }
+
+    .dsr-index {
+        width: 816px; // 8.5in -> pixels. Useful for an accurate rendering during development / 'print' media type emulation
+        max-height: 1056px; // 11in -> pixels. Useful for an accurate rendering during development / 'print' media type emulation
+        overflow: hidden;
+        display: grid;
+        grid-template-rows: auto auto auto auto;
+        grid-template-columns: 1fr 250px;
+
+        .dsr-pro-summary {
+            grid-column: span 2;
+        }
+
+        .dsr-key-skills {
+            grid-column: 2;
+        }
+
+        .dsr-work-history {
+            grid-row: 2;
+            grid-column: 1;
+        }
+    }
+
 }

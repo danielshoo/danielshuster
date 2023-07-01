@@ -31,27 +31,6 @@
     }
   }
 
-  .dsr-list {
-
-    margin: 12px 0;
-    overflow: hidden;
-
-    &__ul {
-      display: flex;
-      flex-direction: column;
-      min-height: 0;
-      transition: visibility 1s;
-      padding-left: 24px;
-      line-height: 1.5rem;
-    }
-
-    &__li {
-      display: list-item;
-      list-style-type: disc;
-      margin-bottom: 10px;
-    }
-  }
-
   &--dark {
     @extend .dsr-work-history;
 
@@ -108,3 +87,17 @@
   }
 }
 
+@media print {
+
+  .dsr-work-history {
+
+    padding: 40px 12px;
+
+    &__toggle {
+      &-label {
+        font-weight: 500;
+        font-size: 1rem;
+      }
+    }
+  }
+}
