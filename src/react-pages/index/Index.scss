@@ -9,6 +9,7 @@
 @use 'components/work-history/components/list/list.scss';
 @use 'components/section-banner/section-banner.scss';
 @use 'components/professional-summary/professional-summary.scss';
+@use 'components/site-menu/site-menu.scss';
 
 
 @import url(https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&display=swap);
@@ -17,6 +18,10 @@
     box-sizing: border-box;
     font-weight: 300;
     font-family: Inter, Arial, Helvetica, sans-serif;
+}
+
+.dsr-index {
+    position: relative;
 }
 
 .html {

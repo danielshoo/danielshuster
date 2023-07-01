@@ -6,16 +6,20 @@ const NavMenu = require('./components/nav-menu/NavMenu');
 const ProfessionalSummary = require('./components/professional-summary/ProfessionalSummary');
 const KeySkills = require('./components/key-skills/KeySkills');
 const WorkHistory = require('./components/work-history/WorkHistory');
+const SiteMenu = require('./components/site-menu/SiteMenu');
 
 const GlobalContext = require('./../../contexts/GlobalContext.tsx');
 
 module.exports = function Index() {
 
     const [theme, setTheme] = React.useState('light');
+    const [doShowSiteMenu, setDoShowSiteMenu] = React.useState(false);
 
     const globalCtx = {
         theme,
         setTheme,
+        doShowSiteMenu,
+        setDoShowSiteMenu,
     };
 
     React.useEffect(() => {
@@ -29,6 +33,7 @@ module.exports = function Index() {
     }, [theme]);
 
     return <GlobalContext.Provider value={globalCtx}>
+            <SiteMenu/>
             <NavigationBar>
                 <NavMenu currentPage={'Resumé'}/>
                 <Search/>

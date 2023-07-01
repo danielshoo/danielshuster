@@ -3,6 +3,8 @@ const navMenuCSS = require('./nav-menu.scss');
 
 const GlobalContext = require('./../../../../contexts/GlobalContext.tsx');
 
+
+
 module.exports = (props) => {
 
     const [currentPage, setCurrentPage] = React.useState(props.currentPage)
@@ -14,7 +16,11 @@ module.exports = (props) => {
         setCurrentPage(props.currentPage);
     }, [props.currentPage]);
 
-    return <span className={rootClassname}>
+    const showMenuPanel = () => {
+        globalCTX.setDoShowSiteMenu(true);
+    }
+
+    return <span className={rootClassname} onClick={showMenuPanel}>
         <div className={'dsr-nav-menu__icon'}>
             <div className={'dsr-nav-menu__icon-bar'}/>
             <div className={'dsr-nav-menu__icon-bar'}/>
