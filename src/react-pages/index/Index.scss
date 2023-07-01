@@ -1,3 +1,15 @@
+@use 'components/key-skills/key-skills';
+@use 'components/nav-menu/nav-menu.scss';
+@use 'components/navigation-bar/navigation-bar.scss';
+@use 'components/theme-toggle/theme-toggle.scss';
+@use 'components/search/search.scss';
+@use 'components/work-history/work-history.scss';
+@use 'components/work-history/components/header/header.scss';
+@use 'components/work-history/components/list/list.scss';
+@use 'components/section-banner/section-banner.scss';
+@use 'components/professional-summary/professional-summary.scss';
+
+
 @import url(https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&display=swap);
 
 * {
