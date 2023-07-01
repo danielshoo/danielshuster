@@ -2,7 +2,7 @@
 
   position: relative;
   box-shadow: 0 2px 1px 0 #0085FF;
-  padding: 30px 12px 0;
+  padding: 30px 12px;
 
   &__display-checkbox {
     appearance: none;
@@ -11,15 +11,29 @@
     position: absolute;
   }
 
-  &__display-toggle {
-    font-weight: 300;
-    font-size: 1.5rem;
+  &__toggle {
+    &-label {
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 300;
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+    }
+
+    &-icon {
+      display: none;
+      width: 20px;
+      height: 20px;
+      background-color: #0085FF;
+      transition: transform 0.3s ease;
+    }
   }
 
   &__skills {
     display: flex;
     flex-wrap: wrap;
-    margin: 12px 0;
   }
 
   &__skill {
@@ -35,13 +49,24 @@
 
 @media screen and (max-width: 650px) {
   .dsr-key-skills {
+
     &__skills {
       height: 0;
       overflow: hidden;;
     }
 
+    &__toggle {
+      &-icon {
+        display: block;
+      }
+    }
+
     &__display-checkbox:checked + .dsr-key-skills__skills {
       height: auto;
+    }
+
+    &__display-checkbox:not(:checked) + .dsr-key-skills__skills {
+      display: none;
     }
   }
 }
