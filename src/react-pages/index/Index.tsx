@@ -1,6 +1,5 @@
 const React = require('react');
 const ThemeToggle = require('./components/theme-toggle/ThemeToggle');
-const Search = require('./components/search/Search');
 const NavigationBar = require('./components/navigation-bar/NavigationBar');
 const NavMenu = require('./components/nav-menu/NavMenu');
 const ProfessionalSummary = require('./components/professional-summary/ProfessionalSummary');
@@ -37,7 +36,6 @@ module.exports = function Index() {
             <SiteMenu/>
             <NavigationBar>
                 <NavMenu currentPage={'Resumé'}/>
-                {/*<Search/>*/}
                 <ThemeToggle/>
             </NavigationBar>
             <ProfessionalSummary>
