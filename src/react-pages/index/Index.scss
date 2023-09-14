@@ -52,11 +52,13 @@ html, body {
     .dsr-index__printed-text {
         display: inline;
         position: absolute;
-        right: 0;
+        top: 10px;
+        right: 10px;
         font-style: italic;
         text-align: center;
         grid-column: span 2;
         margin-right: 10px;
+        color: site-common.$dsr-grey--darker;
     }
 
     .dsr-index {
