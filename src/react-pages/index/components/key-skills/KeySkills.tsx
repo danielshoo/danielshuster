@@ -52,7 +52,6 @@ module.exports = () => {
                 <span className={'dsr-key-skills__skill'}>BEM Notation</span>
                 <span className={'dsr-key-skills__skill'}>Mobile First</span>
                 <span className={'dsr-key-skills__skill'}>Componentization</span>
-                <span className={'dsr-key-skills__skill'}>Wordpress</span>
                 <span className={'dsr-key-skills__skill'}>App Development</span>
                 <span className={'dsr-key-skills__skill'}><span className={'print-media__removed-item'}>Test Driven Development</span><span className={'print-media__added-item'}>TDD</span></span>
                 <span className={'dsr-key-skills__skill'}><span className={'print-media__removed-item'}>Database Normalization</span><span className={'print-media__added-item'}>DB Normalization</span></span>

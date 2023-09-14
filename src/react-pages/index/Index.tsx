@@ -33,7 +33,7 @@ module.exports = function Index() {
     }, [theme]);
 
     return <GlobalContext.Provider value={globalCtx}>
-            <span className={'dsr-index__printed-text'}>Customized for print @ www.danielshuster.com</span>
+            <span className={'dsr-index__printed-text'}>danielshuster.com</span>
             <SiteMenu/>
             <NavigationBar>
                 <NavMenu currentPage={'Resumé'}/>

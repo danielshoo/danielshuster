@@ -10,6 +10,7 @@
     font-size: 2rem;
     font-weight: 700;
     margin: 0;
+    letter-spacing: 2px;
   }
 
   &__selfie-img {
@@ -26,6 +27,7 @@
     font-size: 1.5rem;
     font-weight: 700;
     margin: 0;
+    letter-spacing: 2px;
   }
 
   &__summary {
@@ -79,7 +81,8 @@
 @media print {
   .dsr-pro-summary {
 
-    padding: 0 12px 25px;
+    font-weight: 300;
+    padding: 10px 12px 35px;
 
     &__selfie-img {
       display: none;
@@ -87,6 +90,7 @@
 
     &__summary {
       margin: 0;
+      line-height: 1.35rem;
     }
 
     &__title {

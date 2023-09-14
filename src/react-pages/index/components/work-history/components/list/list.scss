@@ -22,8 +22,13 @@
 }
 
 @media print {
-  .dsr-list__li {
-    line-height: 1.2;
+  .dsr-list {
+
+    font-weight: 300;
+
+    &__li {
+      line-height: 1.2;
+    }
   }
 }
 
